@@ -12,10 +12,11 @@ const SpeedTest = () => {
   const startTime = useRef();
   const endTime = useRef();
 
+  // div 화면 렌더링 부분
   const onClickScreen = () => {
     if (state === "waiting") {
       setState("ready");
-      setMessage("On Green, Click the Screen!");
+      setMessage("If On Green, Click the Screen!");
       // ref의 경우 current로 접근한다.
       timeout.current = setTimeout(() => {
         setState("now");
